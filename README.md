@@ -1,36 +1,21 @@
 # Galaxy Agent Governance Local
 
-Offline governance and blast-radius harness for Trino-backed AI data agents.
-
-This is a local-first, synthetic-data prototype inspired by a company-specific project plan for **Starburst Data**. It is built to demonstrate the engineering shape of `galaxy-agent-governance` without private data, credentials, external APIs, or hosted services.
-
-## Why it matters
-
 Agentic SQL over federated data needs proof that governed data products constrain discovery, access, and generated queries.
 
-## What it does
+The demo hook is concrete: A red/yellow/green map shows exactly which generated Trino queries violate data-product boundaries.
 
-- Generates deterministic synthetic `data product` scenarios.
-- Scores each scenario against domain-specific quality gates.
-- Produces evidence-backed findings for realistic failure modes.
-- Writes a static dashboard, JSON reports, benchmark output, and a portable demo pack.
-- Exposes a JSONL tool loop for local agent integration.
+## Intent
 
-## Metrics
+Offline governance and blast-radius harness for Trino-backed AI datan agents.
 
-- `policy_adherence`
-- `query_blast_radius`
-- `lineage_coverage`
-- `iceberg_context_fit`
+## What the code proves
 
-## Failure modes
+- Seeds `data product` fixtures for `galaxy-agent-governance` with both normal operations and faulted paths.
+- Computes `policy_adherence`, `query_blast_radius`, `lineage_coverage`, and `iceberg_context_fit` from deterministic inputs so the result can be reproduced exactly.
+- Stress-tests `cross_catalog_leak`, `ungoverned_join`, `pii_column_touch`, and `semantic_scope_drift` as named failure classes rather than vague edge cases.
+- Packages `Galaxy Agent Governance Local` artifacts for code review, live demo, and regression comparison.
 
-- `cross_catalog_leak`
-- `ungoverned_join`
-- `pii_column_touch`
-- `semantic_scope_drift`
-
-## Quickstart
+## Local run
 
 ```bash
 uv sync --extra dev
@@ -42,7 +27,7 @@ uv run galaxy-governance benchmark --iterations 100
 uv run galaxy-governance export-demo-pack
 ```
 
-## Expected outputs
+## Produced files
 
 - `data/scenarios.json`
 - `outputs/summary.json`
@@ -52,7 +37,7 @@ uv run galaxy-governance export-demo-pack
 - `outputs/benchmark.json`
 - `outputs/demo-pack.zip`
 
-## Validation
+## Gatekeeping
 
 ```bash
 uv run ruff check .
@@ -62,6 +47,6 @@ uv run galaxy-governance verify
 uv run galaxy-governance benchmark --iterations 100
 ```
 
-## Demo hook
+## Operational boundary
 
-A red/yellow/green map shows exactly which generated Trino queries violate data-product boundaries.
+Every example in `galaxy-agent-governance-local` is fabricated for repeatability. Generated outputs are rebuildable artifacts, not source material.
