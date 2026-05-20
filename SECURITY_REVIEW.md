@@ -4,7 +4,7 @@ Status: complete for the local public release.
 
 ## Scope
 
-- Local CLI and JSONL tool loop for `galaxy-agent-governance`.
+- Local CLI and JSONL tool loop for `trino-policy-receipts`.
 - Deterministic synthetic fixture generation.
 - Static dashboard and demo-pack outputs.
 - Project-local files only.
@@ -23,4 +23,4 @@ No reportable security findings were identified for the public release.
 
 ## Residual Risk
 
-This is a local prototype, not a production integration with Starburst Data. A production version would need authentication, tenant isolation, rate limits, formal privacy review, logging policy, and validation against private ground truth.
+This is a local prototype, not a production governed-query integration. A production version would need authentication, tenant isolation, rate limits, formal privacy review, logging policy, and validation against private ground truth.

@@ -1,5 +1,5 @@
 [project]
-name = "galaxy-agent-governance-local"
+name = "trino-policy-receipts-local"
 version = "0.1.0"
 description = "Offline governance and blast-radius harness for Trino-backed AI data agents."
 readme = "README.md"
@@ -18,7 +18,7 @@ dev = [
 ]
 
 [project.scripts]
-galaxy-governance = "galaxy_agent_governance_local.cli:main"
+trino-policy-receipts = "trino_policy_receipts_local.cli:main"
 
 [build-system]
 requires = ["uv_build>=0.9.0,<0.10.0"]

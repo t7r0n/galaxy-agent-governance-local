@@ -1,13 +1,13 @@
 {
-  "repo": "galaxy-agent-governance-local",
-  "package": "galaxy_agent_governance_local",
-  "cli": "galaxy-governance",
-  "company": "Starburst Data",
-  "title": "Galaxy Agent Governance Local",
+  "repo": "trino-policy-receipts-local",
+  "package": "trino_policy_receipts_local",
+  "cli": "trino-policy-receipts",
+  "company": "Trino Policy Lab",
+  "title": "Trino Policy Receipts Local",
   "tagline": "Offline governance and blast-radius harness for Trino-backed AI data agents.",
   "problem": "Agentic SQL over federated data needs proof that governed data products constrain discovery, access, and generated queries.",
-  "project": "galaxy-agent-governance",
-  "plan_slug": "starburst-data",
+  "project": "trino-policy-receipts",
+  "plan_slug": "trino-policy-receipts",
   "scenario": "data product",
   "fixture_count": 150,
   "clean_count": 35,
@@ -25,8 +25,7 @@
   ],
   "wow": "A red/yellow/green map shows exactly which generated Trino queries violate data-product boundaries.",
   "sources": [
-    "https://www.starburst.io/blog/starburst-galaxy-ai-on-iceberg-foundations/",
-    "https://www.starburst.io/blog/starburst-galaxy-infrastructure-planes/",
-    "https://docs.starburst.io/"
+    "local-synthetic-fixture",
+    "https://trino.io/docs/current/security.html"
   ]
 }
